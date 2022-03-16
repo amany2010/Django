@@ -1,0 +1,176 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Creat Account</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+
+  <section class="site-section bg-light" id="contact-section" data-aos="fade">
+
+
+    <div id="MM" class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 class="section-title mb-3">CREAT ACCOUNT</h2>
+        </div>
+      </div>
+
+      <section style=" background-color: aquamarine;   width:100%;
+            margin:auto;
+            max-width:1000px;
+            min-height:670px;
+            position:relative;
+            box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);">
+
+        <form action="CreatAccount" method="POST" ; class="p-5 bg-white">
+          {% csrf_token %}
+
+          <div class="row form-group">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <label class="text-black" for="fname">Firs Name</label>
+              <input name="firstname" type="text" id="fname" ; class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="text-black" for="lname">Last Name</label>
+              <input name="lastname" type="text" id="lname" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="row form-group">
+
+            <div class="col-md-6 mb-3 mb-md-0">
+              <label class="text-black" for="Password">Password
+              </label>
+              <input name="password" type="password" id="email" class="form-control" required>
+            </div>
+
+
+
+            <div class="col-md-6">
+              <label class="text-black" for="Password"> Confirm Password
+              </label>
+              <input name="confirm_password" type="password" id="email" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="row form-group">
+
+            <div class="col-md-12">
+              <label class="text-black" for="Phone">Phone Number</label>
+              <input name="phoneNum" type="phone" id="email" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="row form-group">
+
+            <div class="col-md-12">
+              <label class="text-black" for="email">Email Address
+              </label>
+              <input name="maile" type="email" id="email" class="form-control">
+            </div>
+          </div>
+
+          <div class="row form-group">
+
+            <div class="col-md-12">
+              <label class="text-black" for="UserName">National ID</label>
+              <input name="national_id" type="text" id="email" class="form-control" required>
+            </div>
+          </div>
+
+
+
+          <div class="row form-group">
+
+            <div class="col-md-12">
+              <label class="text-black" for="Balance">Balance</label>
+              <input name="balanc" type="number" id="email" class="form-control" required>
+            </div>
+          </div>
+
+
+          <div class="row form-group">
+
+            <div class="col-md-12">
+              <label class="text-black" for="">Account Type</label required>
+              <select name="account_type" id="">
+                <option value=""> </option>
+
+                <option value="saving"> Saving</option>
+                <option value="cheacking">Cheacking</option>
+
+              </select>
+            </div>
+          </div>
+
+
+          <div class="row form-group">
+            <div class="col-md-12">
+              <input type="submit" value="Submit" class="btn btn-primary btn-md text-white">
+            </div>
+          </div>
+
+
+        </form>
+        <!--       <div class="alert">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          <strong>Danger!</strong>{{messages}}
+        </div>-->
+    </div>
+
+    </div>
+    </div>
+  </section>
+
+
+  </section>
+
+
+  {% if message %}
+  <script>
+    alert('{{message}}')
+  </script>
+  {%endif%}
+  </div> <!-- .site-wrap -->
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-ui.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'js/jquery.sticky.js' %}"></script>
+  <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+
+</body>
+
+</html>

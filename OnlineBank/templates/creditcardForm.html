@@ -1,0 +1,145 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Creat CeditCard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/cred.css' %}">
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+
+  <section class="site-section bg-light" id="contact-section" data-aos="fade">
+
+
+    <div id="MM" class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <!--<h2 class="section-title mb-3" style="color: black;">Master card standard</h2>!-->
+        </div>
+      </div>
+
+
+
+      <form action="creditcardForm" method="POST" class="p-5 bg-white" style="width:100%;
+            
+            margin:auto;
+            max-width:525px;
+            min-height:670px;
+            position:relative;">
+        {% csrf_token %}
+        <div class="row form-group">
+
+          <div class="col-md-12">
+            <label class="text-black" for="name">NAME</label>
+            <input type="text" name="Name" id="email" class="form-control" required>
+          </div>
+        </div>
+
+
+        <div class="row form-group">
+
+          <div class="col-md-12">
+            <label class="text-black" for="age">AGE</label>
+            <input type="number" name="age" id="email" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="row form-group">
+
+          <div class="col-md-12">
+            <label class="text-black" for="Phone">Monthly salary</label>
+            <input type="number" name="Month_salary" id="email" class="form-control" required>
+          </div>
+        </div>
+
+
+        <div class="row form-group">
+
+          <div class="col-md-12">
+            <label class="text-black" for="Phone">Mobil phone</label>
+            <input type="phone" name="phone" id="email" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="row form-group">
+
+          <div class="col-md-12">
+            <label class="text-black" for="email">Email</label>
+            <input type="email" name="maile" id="email" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="row form-group">
+
+          <div class="col-md-12">
+            <label class="text-black" for="">Credit Type</label required>
+            <select name="card_type" id="">
+              <option value="Master_Standard"> Master card standard</option>
+              <option value="Master_Egyptair"> Master Card Egyptair</option>
+              <option value="visa_classic">Visa Classic</option>
+            </select>
+          </div>
+        </div>
+
+
+
+
+        <div class="row form-group">
+          <div class="col-md-12">
+            <input type="submit" value="Submit" class="btn btn-primary btn-md text-white">
+          </div>
+        </div>
+      </form>
+    </div>
+
+    </div>
+    </div>
+  </section>
+  {% if message %}
+  <script>
+    alert('{{message}}')
+  </script>
+  {%endif%}
+
+
+  </div> <!-- .site-wrap -->
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-ui.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'js/jquery.sticky.js' %}"></script>
+  <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

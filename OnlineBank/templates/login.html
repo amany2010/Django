@@ -1,0 +1,168 @@
+{% load static%}
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>online bank</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href=" {% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700 ' %}" rel=" stylesheet">
+
+  <link rel="stylesheet" href=" {% static 'fonts/icomoon/style.css ' %}">
+
+  <link rel="stylesheet" href=" {% static 'css/bootstrap.min.css ' %}">
+  <link rel="stylesheet" href=" {% static 'css/jquery-ui.css ' %}">
+  <link rel="stylesheet" href=" {% static 'css/owl.carousel.min.css ' %}">
+  <link rel="stylesheet" href=" {% static 'css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href=" {% static 'css/owl.theme.default.min.css ' %}">
+
+  <link rel="stylesheet" href=" {% static 'css/jquery.fancybox.min.css ' %}">
+
+  <link rel="stylesheet" href=" {% static 'css/bootstrap-datepicker.css' %}">
+
+  <link rel="stylesheet" href=" {% static 'fonts/flaticon/font/flaticon.css' %}">
+
+  <link rel="stylesheet" href=" {% static 'css/aos.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/style.css ' %}">
+  <link rel="stylesheet" href=" {% static 'css/signin.css ' %}">
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+
+
+    <form action="login" method="POST">
+      {% csrf_token %}
+      <div class="login-wrap">
+        <div class="login-html">
+          <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign
+            In</label>
+          <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+          <div class="login-form">
+            <div class="sign-in-htm">
+              <div class="group">
+                <label for="user" class="label">Username</label>
+                <input id="user" type="text" class="input" name="username">
+              </div>
+              <div class="group">
+                <label for="pass" class="label">Password</label>
+                <input id="pass" type="password" class="input" data-type="password" name="password">
+              </div>
+              <div class="group">
+                <input id="check" type="checkbox" class="check" checked>
+                <label for="check"><span class="icon"></span> Keep me Signed in</label>
+              </div>
+              <div class="group">
+                <input type="submit" class="button" value="Sign In">
+              </div>
+    </form>
+    <div class="hr"></div>
+    <div class="foot-lnk">
+      <a href="forgetPassword">Forgot Password?</a>
+    </div>
+  </div>
+  </form>
+
+
+
+  <form action="register" method="POST">
+    {% csrf_token %}
+    <div class="sign-up-htm">
+      <div class="group">
+        <label for="user" class="label">Username</label>
+        <input id="user" type="text" class="input" name="username">
+      </div>
+      <div class="group">
+        <label for="pass" class="label">Password</label>
+        <input id="pass" type="password" class="input" name="psw" data-type="password">
+      </div>
+      <div class="group">
+        <label for="pass" class="label">Repeat Password</label>
+        <input id="pass" type="password" class="input" name="psw_repeat" data-type="password">
+      </div>
+      <div class="group">
+        <label for="pass" class="label">Email Address</label>
+        <input id="pass" type="text" class="input" name="email">
+      </div>
+      <div class="group">
+        <input type="submit" class="button" value="Sign Up">
+      </div>
+      <div class="hr"></div>
+      <div class="foot-lnk">
+        <label for="tab-1">Already Member?</a>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+  </form>
+  {% if message %}
+  <script>
+    alert('{{message}}')
+  </script>
+  {%endif%}
+
+
+  <footer>
+    <div class="row pt-5 mt-5 text-center">
+      <div class="col-md-12">
+        <div style="height: 10px;" class="border-top pt-5">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          <p>
+            <script>document.write(new Date().getFullYear());</script> Project software | This Project is made
+            with <i class="icon-heart-o" aria-hidden="true"></i> by <a href="{% static 'https://colorlib.com' %}"
+              target="_blank">DARK TEAM</a>
+          </p>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+        </div>
+      </div>
+  </footer>
+
+
+  </div> <!-- .site-wrap -->
+  <script src=" {% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-ui.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'js/jquery.sticky.js' %}"></script>
+  <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+
+
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
